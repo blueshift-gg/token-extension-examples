@@ -1,0 +1,24 @@
+{
+  "name": "tokenExtensions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "keygen": "ts-node ./keygen.ts",
+    "transferFee": "ts-node ./extensions/transferFee.ts",
+    "mintCloseAuthority": "ts-node ./extensions/mintCloseAuthority.ts",
+    "defaultAccountState": "ts-node ./extensions/defaultAccountState.ts",
+    "memoTransfer": "ts-node ./extensions/memoTransfer.ts"
+  },
+  "dependencies": {
+    "@solana/spl-memo": "^0.2.5",
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.98.2",
+    "@types/node": "^24.0.4",
+    "bs58": "^6.0.0",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  }
+}
