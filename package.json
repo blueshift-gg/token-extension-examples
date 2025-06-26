@@ -13,11 +13,13 @@
     "nonTransferable": "ts-node ./extensions/nonTransferable.ts",
     "interestBearing": "ts-node ./extensions/interestBearing.ts",
     "cpiGuard": "ts-node ./extensions/cpiGuard.ts",
-    "permanentDelegate": "ts-node ./extensions/permanentDelegate.ts"
+    "permanentDelegate": "ts-node ./extensions/permanentDelegate.ts",
+    "metadata": "ts-node ./extensions/metadata.ts"
   },
   "dependencies": {
     "@solana/spl-memo": "^0.2.5",
     "@solana/spl-token": "^0.4.13",
+    "@solana/spl-token-metadata": "^0.1.6",
     "@solana/web3.js": "^1.98.2",
     "@types/node": "^24.0.4",
     "bs58": "^6.0.0",
