@@ -8,7 +8,12 @@
     "transferFee": "ts-node ./extensions/transferFee.ts",
     "mintCloseAuthority": "ts-node ./extensions/mintCloseAuthority.ts",
     "defaultAccountState": "ts-node ./extensions/defaultAccountState.ts",
-    "memoTransfer": "ts-node ./extensions/memoTransfer.ts"
+    "memoTransfer": "ts-node ./extensions/memoTransfer.ts",
+    "immutableOwner": "ts-node ./extensions/immutableOwner.ts",
+    "nonTransferable": "ts-node ./extensions/nonTransferable.ts",
+    "interestBearing": "ts-node ./extensions/interestBearing.ts",
+    "cpiGuard": "ts-node ./extensions/cpiGuard.ts",
+    "permanentDelegate": "ts-node ./extensions/permanentDelegate.ts"
   },
   "dependencies": {
     "@solana/spl-memo": "^0.2.5",

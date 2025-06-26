@@ -13,7 +13,6 @@ import {
     getAccountLen,
     createInitializeAccountInstruction,
     MINT_SIZE,
-    createTransferInstruction,
 } from "@solana/spl-token";
 
 import { createMemoInstruction } from "@solana/spl-memo";
