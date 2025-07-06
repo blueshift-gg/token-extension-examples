@@ -5,21 +5,13 @@ import {
     TOKEN_2022_PROGRAM_ID,
     createAssociatedTokenAccountIdempotentInstruction,
     createInitializeMintInstruction,
-    createInitializeTransferFeeConfigInstruction,
     getMintLen,
-    getTransferFeeAmount,
-    unpackAccount,
     getAssociatedTokenAddress,
     createMintToInstruction,
     createTransferCheckedInstruction,
-    createWithdrawWithheldTokensFromAccountsInstruction,
-    createTransferCheckedWithFeeInstruction,
-    withdrawWithheldTokensFromAccounts,
-    transferChecked,
     createInitializePermanentDelegateInstruction,
-    createBurnInstruction,
     createBurnCheckedInstruction,
-  } from "@solana/spl-token";
+} from "@solana/spl-token";
 
 import wallet from "../wallet.json"
 

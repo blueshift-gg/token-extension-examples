@@ -9,10 +9,10 @@ import {
     createInitializeGroupMemberPointerInstruction,
     TYPE_SIZE,
     LENGTH_SIZE,
-  } from "@solana/spl-token";
+} from "@solana/spl-token";
 
 import wallet from "../wallet.json"
-import { createInitializeGroupInstruction, TOKEN_GROUP_SIZE, createUpdateGroupAuthorityInstruction, createInitializeMemberInstruction, TOKEN_GROUP_MEMBER_SIZE } from "@solana/spl-token-group";
+import { createInitializeGroupInstruction, TOKEN_GROUP_SIZE, createUpdateGroupAuthorityInstruction, createInitializeMemberInstruction, TOKEN_GROUP_MEMBER_SIZE, createUpdateGroupMaxSizeInstruction } from "@solana/spl-token-group";
 
 // We're going to import our keypair from the wallet file
 const keypair = Keypair.fromSecretKey(new Uint8Array(wallet));
@@ -154,7 +154,16 @@ async function updateGroup(connection: Connection, keypair: Keypair, mint: Keypa
         }
     );
 
-    const transaction = new Transaction().add(updateGroupAuthorityInstructions);
+    const updateGroupMaxSizeInstructions = createUpdateGroupMaxSizeInstruction(
+        {
+            programId: TOKEN_2022_PROGRAM_ID,
+            group: mint.publicKey,
+            updateAuthority: keypair.publicKey,
+            maxSize: BigInt(100),
+        }
+    );
+
+    const transaction = new Transaction().add(updateGroupAuthorityInstructions, updateGroupMaxSizeInstructions);
 
     const signature = await sendAndConfirmTransaction(connection, transaction, [keypair], {commitment: "finalized"});
 

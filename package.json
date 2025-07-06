@@ -15,7 +15,9 @@
     "cpiGuard": "ts-node ./extensions/cpiGuard.ts",
     "permanentDelegate": "ts-node ./extensions/permanentDelegate.ts",
     "metadata": "ts-node ./extensions/metadata.ts",
-    "group": "ts-node ./extensions/group.ts"
+    "group": "ts-node ./extensions/group.ts",
+    "buildStablecoin": "ts-node ./challenges/build-your-stablecoin.ts",
+    "buildSoulboundedNft": "ts-node ./challenges/build-your-soulbounded-nft.ts"
   },
   "dependencies": {
     "@solana/spl-memo": "^0.2.5",

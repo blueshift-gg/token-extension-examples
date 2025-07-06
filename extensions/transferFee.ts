@@ -15,6 +15,7 @@ import {
     createWithdrawWithheldTokensFromAccountsInstruction,
     createTransferCheckedWithFeeInstruction,
     withdrawWithheldTokensFromAccounts,
+    createSetTransferFeeInstruction,
     transferChecked,
   } from "@solana/spl-token";
 

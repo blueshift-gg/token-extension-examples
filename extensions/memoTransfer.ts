@@ -189,6 +189,13 @@ async function updateMemoRequirementAndTransferTokens(connection: Connection, ke
         TOKEN_2022_PROGRAM_ID,
     );
 
+    const enableRequiredMemoTransfersInstruction = createEnableRequiredMemoTransfersInstruction(
+        destinationTokenAccount,
+        destinationKeypair.publicKey,
+        undefined,
+        TOKEN_2022_PROGRAM_ID,
+    );
+
     const transferInstruction = createTransferCheckedInstruction(
         tokenAccount,
         mint.publicKey,
